@@ -1,0 +1,15 @@
+<!-- pendientes.html -->
+<!DOCTYPE html>
+<html>
+<head>
+<title>Tareas Pendientes</title>
+</head>
+<body>
+<h1>Tareas Pendientes</h1>
+<ul>
+{% for tarea in tareas %}
+<li>{{ tarea.titulo }}: {{ tarea.descripcion }}</li>
+{% endfor %}
+</ul>
+</body>
+</html>
