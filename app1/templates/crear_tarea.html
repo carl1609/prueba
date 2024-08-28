@@ -1,0 +1,28 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<title>Crear Nueva Tarea</title>
+</head>
+<body>
+<h2>***Crear Nueva Tarea***</h2>
+<form action={{url}} method="POST">
+
+<label for ="titulo">Titulo:</label>
+<input type="text" id="titulo" name="titulo" required><br><br>
+
+<label for="descripcion">Descripcion:</label>
+<textarea id="descripcion" name="descripcion" required></textarea><br><br>
+
+<label for="estado">Estado:</label>
+<select id="estado" name="estado">
+{% for estado in estados %}
+<option value="{{ estado }}">{{ estado|capfirst }}</option>
+{% endfor%}
+</select>
+
+<input type="submit" value="Crear Tarea">
+</form>
+</body>
+</html>
